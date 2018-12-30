@@ -1,0 +1,76 @@
+ <!-- Sobreescritas do CSS -->
+
+ <style>
+ .navbar.is-primary {
+    background-color: rgb(76,79,77, 0.8);
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    font-family: Montserrat, "Open Sans", Helvetica, Arial, sans-serif;
+    font-size: 90%;
+    z-index: 1;
+}
+
+
+@media screen and (min-width: 1024px){}
+.navbar.is-primary .navbar-end .navbar-link.is-active, .navbar.is-primary .navbar-end .navbar-link:hover, .navbar.is-primary .navbar-end>a.navbar-item.is-active, .navbar.is-primary .navbar-end>a.navbar-item:hover, .navbar.is-primary .navbar-start .navbar-link.is-active, .navbar.is-primary .navbar-start .navbar-link:hover, .navbar.is-primary .navbar-start>a.navbar-item.is-active, .navbar.is-primary .navbar-start>
+  a.navbar-item:hover {
+    background-color: transparent;
+    color: #ffd100;
+    text-decoration: none;
+}
+
+    .item{
+     background-size:cover;
+  width:250px;
+  height:250px;}
+
+  a.item:hover{
+    width:100%;
+  height:100%;
+  background-color:rgba(0,0,0,0.3);
+}
+
+</style>
+
+<!-- Navbar -->
+
+
+ <nav class="navbar is-primary">
+      <div class="container">
+        <div class="navbar-brand">
+          <a href="#">
+          <img style="height: 50px" src="./assets/logo.png">
+          </a>
+          <span class="navbar-burger burger" data-target="navMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </div>
+        <div id="navMenu" class="navbar-menu">
+          <div class="navbar-end">
+            <a href="#" class="navbar-item">Home</a>
+            <a href="#" class="navbar-item">Quem Somos</a>
+            <a href="#" class="navbar-item">Serviços</a>
+            <a href="#" class="navbar-item">Portfólio</a>
+            <a href="#" class="navbar-item">Contato</a>
+            <a href="#" classe="item"><img style="height: 30px" src="./assets/fac.png"></a>
+            <a href="#" classe="item"><img style="height: 30px" src="./assets/lin.png"></a>
+            
+          </div>
+        </div>
+      </div>
+    </nav>
+
+<!-- Função para fazer a responsividade funcionar -->
+
+    <script type="text/javascript">
+      (function() {
+        var burger = document.querySelector('.burger');
+        var nav = document.querySelector('#'+burger.dataset.target);
+        burger.addEventListener('click', function(){
+          burger.classList.toggle('is-active');
+          nav.classList.toggle('is-active');
+        });
+      })();</script>
